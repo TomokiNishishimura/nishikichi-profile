@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "nishikichiprofile",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authnishikichiprofile01d0f44f",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
