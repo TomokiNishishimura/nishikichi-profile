@@ -6,7 +6,7 @@ import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import Amplify, { I18n } from 'aws-amplify';
 
-import { translations } from '@aws-amplify/ui';
+// import { translations } from '@aws-amplify/ui';
 import { vocabularies } from '../assets/i18n/amplify/vocabularies';
 import AuthenticatorComponent from '../components/AuthenticatorComponent';
 I18n.putVocabularies(vocabularies);
