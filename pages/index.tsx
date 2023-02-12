@@ -4,9 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import awsExports from 'src/aws-exports';
 import Amplify, { I18n } from 'aws-amplify';
-Amplify.configure(awsExports);
 
 import { translations } from '@aws-amplify/ui';
 import { vocabularies } from '../assets/i18n/amplify/vocabularies';
