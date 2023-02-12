@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "nishikichiprofile01d0f44f": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1efyaxcktb8n6",
+          "type": "cicd"
+        }
       }
     }
   }
