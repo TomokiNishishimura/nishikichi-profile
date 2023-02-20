@@ -25,7 +25,7 @@ const handleCreatePost = async (event: React.FormEvent<HTMLFormElement>) => {
     });
     if ("data" in result && result.data){
       const data = result.data as CreatePostMutation
-      window.location.href = `/posts/${data.createPost!.id}`;
+      window.location.href = `/blogs/${data.createPost!.id}`;
 
     }
   } catch ({ errors }) {
@@ -37,7 +37,27 @@ const handleCreatePost = async (event: React.FormEvent<HTMLFormElement>) => {
 const New = () => {
   return (
     <RequireAuth>
-      <Heading>ブログを作成</Heading>
+      <>
+        <Heading>ブログを作成</Heading>
+        <form onSubmit={handleCreatePost}>
+          <fieldset>
+            <legend>タイトル</legend>
+            <input
+              defaultValue={`Today, ${new Date().toLocaleTimeString()}`}
+              name="title"
+            />
+          </fieldset>
+          <fieldset>
+            <legend>メッセージ</legend>
+            <textarea
+              defaultValue="Amplify + Next.js + Typescriptでアプリつくってみた!"
+              name="content"
+            />
+          </fieldset>
+
+          <button>投稿する</button>
+        </form>
+      </>
     </RequireAuth>
   )
 }
